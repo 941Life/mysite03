@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.jx372.mysite.service.GuestbookService;
 import com.jx372.mysite.vo.GuestbookVO;
+import com.jx372.security.Auth;
+
 
 @Controller
 @RequestMapping("/guestbook")
@@ -17,7 +19,7 @@ public class GuestbookController {
 	
 	@Autowired
 	private GuestbookService guestbookService;
-	
+	@Auth
 	@RequestMapping(value={"/list","/"}, method=RequestMethod.GET)
 	public String list(Model model){
 		model.addAttribute("list", guestbookService.getList());

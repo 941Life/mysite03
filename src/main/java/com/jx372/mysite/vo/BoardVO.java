@@ -1,70 +1,96 @@
 package com.jx372.mysite.vo;
 
 public class BoardVO {
-	private int no;
+	private Long no;
 	private String title;
 	private String content;
 	private int count;
 	private String reg_date;
-	private int group_no;
-	private int order_no;
+	private int groupNo;
+	private int orderNo;
 	private int depth;
-	private int user_no;
+	private Long userNo;
+	private String userName;
 	
-	public int getNo() {
+	public Long getNo() {
 		return no;
 	}
-	public void setNo(int no) {
+	
+	public void setNo(Long no) {
 		this.no = no;
 	}
+	
 	public String getTitle() {
 		return title;
 	}
+	
 	public void setTitle(String title) {
 		this.title = title;
 	}
+	
 	public String getContent() {
 		return content;
 	}
+	
 	public void setContent(String content) {
 		this.content = content;
 	}
+	
 	public int getCount() {
 		return count;
 	}
+	
 	public void setCount(int count) {
 		this.count = count;
 	}
+	
 	public String getReg_date() {
 		return reg_date;
 	}
+	
 	public void setReg_date(String reg_date) {
 		this.reg_date = reg_date;
 	}
-	public int getGroup_no() {
-		return group_no;
+	
+	public int getGroupNo() {
+		return groupNo;
 	}
-	public void setGroup_no(int group_no) {
-		this.group_no = group_no;
+	
+	public void setGroupNo(int groupNo) {
+		this.groupNo = groupNo;
 	}
-	public int getOrder_no() {
-		return order_no;
+	
+	public int getOrderNo() {
+		return orderNo;
 	}
-	public void setOrder_no(int order_no) {
-		this.order_no = order_no;
+	
+	public void setOrderNo(int orderNo) {
+		this.orderNo = orderNo;
 	}
+	
 	public int getDepth() {
 		return depth;
 	}
 	public void setDepth(int depth) {
 		this.depth = depth;
 	}
-	public int getUser_no() {
-		return user_no;
+	public Long getUserNo() {
+		return userNo;
 	}
-	public void setUser_no(int user_no) {
-		this.user_no = user_no;
+	public void setUserNo(Long userNo) {
+		this.userNo = userNo;
 	}
-	
-	
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	@Override
+	public String toString() {
+		return "BoardVO [no=" + no + ", title=" + title + ", content=" + content + ", count=" + count + ", reg_date="
+				+ reg_date + ", groupNo=" + groupNo + ", orderNo=" + orderNo + ", depth=" + depth + ", userNo=" + userNo
+				+ ", userName=" + userName + "]";
+	}	
 }

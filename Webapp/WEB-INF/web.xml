@@ -36,7 +36,7 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
-	<!-- 공통 에러 페이지 -->
+	 <!-- 공통 에러 페이지 -->
 	<error-page>
 		<error-code>404</error-code>
 		<location>/WEB-INF/views/error/404NotFound.jsp</location>

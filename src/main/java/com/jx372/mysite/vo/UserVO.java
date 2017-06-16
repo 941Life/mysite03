@@ -1,12 +1,31 @@
 package com.jx372.mysite.vo;
 
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class UserVO {
 	private long no;
-	private String name;
-	private String email;
-	private String password;
-	private String gender;
 	
+	@NotEmpty
+	@Length(min=2, max=8)
+	private String name;
+	
+	@NotEmpty
+	@Email
+	private String email;
+	
+	private String password;
+	
+	private String gender;
+	private String role;
+	
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
 	public long getNo() {
 		return no;
 	}

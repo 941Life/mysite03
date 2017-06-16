@@ -12,15 +12,20 @@ public class UserService {
 	@Autowired
 	private UserDao userDao;
 	
+	public boolean existEmail( String email) {
+		UserVO userVo = userDao.get( email );
+		return userVo != null;
+	}
+	
 	public void join ( UserVO userVo){
 		userDao.insert(userVo);
 	}
 	
-	public UserVO getUser(String email, String password){
+	public UserVO getUser( String email, String password ){
 		return userDao.get(email, password);
 	}
 	
-	public UserVO getUser ( Long no ) {	
+	public UserVO getUser( Long no ) {	
 		return userDao.get(no);
 	}
 }

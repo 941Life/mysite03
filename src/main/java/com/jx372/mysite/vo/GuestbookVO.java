@@ -1,16 +1,16 @@
 package com.jx372.mysite.vo;
 
 public class GuestbookVO {
-	private int no;
+	private long no;
 	private String name;
 	private String pwd;
 	private String message;
 	private String date;
 	
-	public int getNo() {
+	public long getNo() {
 		return no;
 	}
-	public void setNo(int no) {
+	public void setNo(long no) {
 		this.no = no;
 	}
 	public String getName() {

@@ -17,8 +17,8 @@
 		<div id="content">
 			<div id="board">
 				<form id="search_form" action="" method="post">
-					<input type="text" id="kwd" name="kwd" value=""> <input
-						type="submit" value="찾기">
+					<input type="text" id="kwd" name="kwd" value= ${keyword } >
+					<input type="submit" value="찾기">
 				</form>
 				<table class="tbl-ex">
 					<tr>
@@ -32,11 +32,20 @@
 					<c:forEach items="${list}" var="vo" varStatus="status">
 						<tr>
 							<td>${vo.no }</td>
-							<td class="left"><a href="./board?a=view&no=${vo.no }">${vo.title }</a></td>
-							<td>${vo.user_no }</td>
+							<td class="left"><a href="${pageContext.request.contextPath }/board/view/${vo.no }">${vo.title }</a></td>
+							<td>${vo.userName }</td>
 							<td>${vo.count }</td>
 							<td>${vo.reg_date }</td>
-							<td><a href="" class="del">삭제</a></td>
+							<td>
+							<%-- <c:choose>
+									<c:when test="${not empty authUser && authUser.no == vo.userNo }"> --%>
+										<a href="${pageContext.request.contextPath }/board/delete/${vo.no }" class="del">삭제</a>
+									<%-- </c:when>
+									<c:otherwise>
+										&nbsp;
+									</c:otherwise>
+							</c:choose> --%>
+							</td>	
 						</tr>
 					</c:forEach>
 				</table>
@@ -45,14 +54,14 @@
 						<li><a href="">◀</a></li>
 						<li><a href="">1</a></li>
 						<li><a href="">2</a></li>
-						<li class="selected">3</li>
+						<li class="">3</li>
 						<li><a href="">4</a></li>
 						<li><a href="">5</a></li>
 						<li><a href="">▶</a></li>
 					</ul>
 				</div>
 				<div class="bottom">
-					<a href="./board?a=writeForm" id="new-book">글쓰기</a>
+					<a href="${pageContext.request.contextPath }/board/write" id="new-book">글쓰기</a>
 				</div>
 			</div>
 		</div>

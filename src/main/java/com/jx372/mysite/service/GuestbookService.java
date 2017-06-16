@@ -14,7 +14,6 @@ public class GuestbookService {
 	@Autowired
 	private GuestbookDao guestbookDao;
 	
-	
 	public List<GuestbookVO> getList(){
 		List<GuestbookVO> list = guestbookDao.getList();
 		return list;
