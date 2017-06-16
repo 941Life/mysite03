@@ -29,7 +29,7 @@
 	<!-- Connection Pool DataSource -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/webdb?useUnicode=yes&amp;characterEncoding=UTF-8&amp;autoReconnect=true"/>
+		<property name="url" value="jdbc:mysql://192.168.1.75:3306/webdb?useUnicode=yes&amp;characterEncoding=UTF-8&amp;autoReconnect=true"/>
 		<property name="username" value="webdb" />
 		<property name="password" value="webdb" />
 		<property name="initialSize" value="20" />
